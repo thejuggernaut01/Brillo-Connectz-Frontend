@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react";
 import api from "@/utils/api";
 import { useRouter } from "next/navigation";
 
-interface FormData {
-  email: string;
-  password: string;
-}
 interface InterestPageProps {
-  registrationData: FormData;
+  registrationData: {
+    email: string;
+    password: string;
+  };
   phoneNumber: string | undefined;
 }
 const InterestPage: React.FC<InterestPageProps> = ({
